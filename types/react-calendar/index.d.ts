@@ -4,11 +4,13 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 3.5
 
+import { Dispatch, SetStateAction } from "react";
+
 export type CalendarType = "ISO 8601" | "US" | "Arabic" | "Hebrew";
 export type Detail = "month" | "year" | "decade" | "century";
 export type DateCallback = (date: Date) => void;
 export type ClickWeekNumberCallback = (weekNumber: number, date: Date) => void;
-export type OnChangeDateCallback = (date: Date | Date[]) => void;
+export type OnChangeDateCallback = Dispatch<SetStateAction<Date>>;
 export type FormatterCallback = (locale: string, date: Date) => string;
 export type ViewCallback = (props: ViewCallbackProperties) => void;
 
